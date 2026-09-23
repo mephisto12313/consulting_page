@@ -1,0 +1,7 @@
+.page {
+  padding-top: calc(var(--header-h) + 1rem);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}

@@ -1,0 +1,144 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-h);
+  backdrop-filter: blur(14px);
+  background: rgba(238, 240, 242, 0.88);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.onHero {
+  position: absolute;
+  inset-inline: 0;
+  background: linear-gradient(to bottom, rgba(18, 21, 26, 0.55), transparent);
+  border-bottom: none;
+  color: var(--color-on-dark);
+}
+
+.onHero .logo,
+.onHero .nav a,
+.onHero .phone {
+  color: var(--color-on-dark);
+}
+
+.inner {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.nav a {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  transition: color 0.2s var(--ease);
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--color-text);
+}
+
+.onHero .nav a:hover,
+.onHero .nav a.active {
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.phone {
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cta {
+  white-space: nowrap;
+}
+
+.call {
+  white-space: nowrap;
+}
+
+.burger {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  background: transparent;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  margin: 6px 0;
+  background: currentColor;
+}
+
+@media (max-width: 960px) {
+  .phone,
+  .call {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .navOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    padding: 1.25rem 1.25rem 1.5rem;
+    background: var(--color-bg-deep);
+    color: var(--color-on-dark);
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navOpen a {
+    color: var(--color-on-dark-muted);
+    font-size: 1.15rem;
+  }
+
+  .burger {
+    display: inline-block;
+    color: inherit;
+  }
+
+  .inner {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .cta {
+    padding-inline: 0.9rem;
+    font-size: 0.85rem;
+  }
+}

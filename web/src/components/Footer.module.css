@@ -1,0 +1,75 @@
+.footer {
+  background: var(--color-bg-deep);
+  color: var(--color-on-dark);
+  padding: 3.5rem 0 1.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1.4fr;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  color: var(--color-on-dark-muted);
+  max-width: 28rem;
+  font-size: 0.95rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.nav a {
+  color: var(--color-on-dark-muted);
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  color: var(--color-on-dark-muted);
+  font-size: 0.92rem;
+}
+
+.contacts a:hover {
+  color: #fff;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--color-on-dark-muted);
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+}
